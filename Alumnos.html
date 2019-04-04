@@ -1,0 +1,150 @@
+<!-- Creator: Sergio Andrés Álvarez Medina -->
+<!-- Creation Date: 02-04-2019 -->
+
+<html>
+	<head>
+		<title>Alumnos</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- CONECCION A LOS ICONOS -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		
+		<!-- BOOTSTRAP -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
+		<!-- ESTILOS DE LA TABLA-->
+		<link rel="stylesheet" href="../CSS/TableStyles.css">
+			
+	</head>
+
+	<body>
+	
+	<!-- AQUI HAY UN PSEUDO FORMULARIO PARA SABER DE DONDE CARGAR LOS DATOS  -->
+	<div class="container">
+		
+		<form>
+			<div class="form-group">
+			
+			  <!--PARA SELECCIONAR AÑO-->
+			  <label for="sel1">Seleccione año:</label>
+			  <select class="form-control" id="año">
+				<option>2017</option>
+				<option>2018</option>
+				<option selected>2019</option>
+				<option>2020</option>
+			  </select>
+			  
+			  <!--PARA SELECCIONAR SEMESTRE-->
+			  <label for="sel1">Seleccione semestre:</label>
+			  <select class="form-control" id="semestre">
+				<option selected>Primavera</option>
+				<option>Otoño</option>
+				</select>
+				
+				<label for="sel1">Seleccione código:</label>
+			  <select class="form-control" id="codigo">
+				<option selected>CC4401</option>
+				<option>CC4201</option>
+				<option>CC4100</option>
+			  </select>
+			  
+			  <!--PARA SELECCIONAR SECCION-->
+			  <label for="sel1">Seleccione sección:</label>
+			  <select class="form-control" id="seccion">
+				<option selected>1</option>
+				<option>2</option>
+				</select>
+			  
+			</div>
+		 </form>
+		
+		
+		<div class="container" style="display:flex">
+
+			<button type="button" class= "btn btn-primary">Cargar Información</button>
+				
+			<div class="container" style="display:flex">
+				<label for="sel1">Ordenar por:&emsp; &emsp;</label>
+				<select class="form-control" id="ordenar">
+					<option selected>Nombre</option>
+					<option>Apellido</option>
+					<option>Grupo</option>
+					<option>Presento</option>
+				</select>
+			</div>
+
+		</div>
+			 
+	</div>
+	
+	<br>
+	<br>
+	
+	<!-- AQUI COMIENZA LA TABLA PRINCIPAL QUE ALMACENARA LA INFORMACION DE LOS ALUMNOS -->
+	
+	<div class="container table-responsive">
+	  <table class="table table-bordered table-hover">
+		
+		<tr>
+		  <th class = "centerTextTable">Nombres</th>
+		  <th class = "centerTextTable">Apellidos</th>
+		  <th class = "centerTextTable">Grupo </th>
+		  <th class = "centerTextTable">Presentó</th>
+		</tr>
+		
+		<tr>
+		  <td>Ignacio Andrés</td>
+		  <td>Caro Ahumada</td>
+		  <td class = "centerTextTable">11</td>
+		  <td class = "centerTextTable">No</td>
+		</tr>
+		
+		<tr>
+		  <td>Sebastían Esteban</td>
+		  <td>Urrutia Cifuentes</td>
+		  <td class = "centerTextTable">11</td>
+		  <td class = "centerTextTable">Sí</td>
+		</tr>
+		
+		<tr>
+		  <td>Félix Alonso</td>
+		  <td>Cerda Riquelme</td>
+		  <td class = "centerTextTable">11</td>
+		  <td class = "centerTextTable">Sí</td>
+		</tr>
+		
+		<tr>
+		  <td>Ricardo Orlando</td>
+		  <td>Chaperon Burgos</td>
+		  <td class = "centerTextTable">9</td>
+		  <td class = "centerTextTable">No</td>
+		</tr>
+		
+		<tr>
+		  <td>Sofía Macarena</td>
+		  <td>Paredes Fuentes</td>
+		  <td class = "centerTextTable">9</td>
+		  <td class = "centerTextTable">Sí</td>
+		</tr>
+		
+		<tr>
+		  <td>José Ignacio</td>
+		  <td>Días rivera</td>
+		  <td class = "centerTextTable">9</td>
+		  <td class = "centerTextTable">No</td>
+		</tr>
+		
+		<tr>
+		  <td>Joaquín Alberto</td>
+		  <td>Barrientos Osorio</td>
+		  <td class = "centerTextTable">5</td>
+		  <td class = "centerTextTable">No</td>
+		</tr>
+		
+	  </table>
+	</div>
+	
+	</body>
+</html>
