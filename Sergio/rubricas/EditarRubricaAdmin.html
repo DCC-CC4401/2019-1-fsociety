@@ -1,0 +1,198 @@
+<!-- Creator: Sergio Andrés Álvarez Medina -->
+<!-- Creation Date: 02-04-2019 -->
+
+<html>
+		<head>
+				<meta charset="utf-8">
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<title>fsociety</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<link rel="stylesheet" type="text/css" media="screen" href="../style.css">
+				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+				<script src="../main.js"></script>
+		</head>
+
+	<body>
+
+		<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+						<img src="../../img/fsociety400x400.png" weight="60" height="60" class="d-inline-block align-top" alt="">
+						<a class="navbar-brand" href="../main.html">
+								fsociety
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarNavDropdown">
+								<ul class="navbar-nav ml-auto">
+										<li class="nav-item">
+												<a class="nav-link" href="../main.html">Inicio</a>
+										</li>
+										<li class="nav-item dropdown">
+												<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Secciones
+												</a>
+												<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+												<a class="dropdown-item" href="../secciones/ver-secciones.html">Ver todas</a>
+												<a class="dropdown-item" href="../secciones/admin-secciones.html">Administrar</a>
+												</div>
+										</li>
+										<li class="nav-item dropdown active">
+												<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Alumnos
+												</a>
+												<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+												<a class="dropdown-item" href="../alumnos/ver-alumnos.html">Ver todos</a>
+												<a class="dropdown-item" href="../alumnos/resumen-alumnos.html">Ver resumen<span class="sr-only">(current)</span></a>
+												</div>
+										</li>
+										<li class="nav-item dropdown">
+												<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Grupos
+												</a>
+												<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+												<a class="dropdown-item" href="../grupos/ver-grupos.html">Ver todos</a>
+												<a class="dropdown-item" href="../grupos/admin-grupos.html">Administrar</a>
+												</div>
+										</li>
+										<li class="nav-item dropdown">
+												<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Evaluadores
+												</a>
+												<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+												<a class="dropdown-item" href="../evaluadores/ver-evaluadores.html">Ver todos</a>
+												<a class="dropdown-item" href="../evaluadores/admin-evaluadores.html">Administrar</a>
+												</div>
+										</li>
+										<li class="nav-item dropdown">
+												<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Rúbricas
+												</a>
+												<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+												<a class="dropdown-item" href="../rubricas/ver-rubricas.html">Ver todas</a>
+												<a class="dropdown-item" href="../rubricas/admin-rubricas.html">Administrar</a>
+												</div>
+										</li>
+										<li class="nav-item">
+												<a class="nav-link" href="../instancias/instancias.html">Instancias</a>
+										</li>
+										<li class="nav-item">
+												<a class="nav-link" href="../evaluar/evaluar.html">Evaluar</a>
+										</li>
+								</ul>
+						</div>
+				</nav>
+		</div>
+
+		<br>
+		
+
+		<form>
+				<div class="container form-group">
+				
+					<label for="sel1">Seleccione una rúbrica:</label>
+					<select class="form-control" id="rubrica">
+					<option>Rúbrica 1</option>
+					<option>Rúbrica 2</option>
+					<option selected>Rúbrica 3</option>
+					<option>Rúbrica 4</option>
+					</select>
+
+					<br>
+					<br>
+
+					<button type="button" class= "btn btn-primary">Cargar Información</button>
+					
+					<hr>
+
+			</div>
+		</form>
+
+
+	
+	
+	<div class="container table-responsive">
+	  <table class="table table-bordered table-hover">
+		
+		<tr>
+		  <th class = "centerTextTable">Puntajes</th>
+		  <th class = "centerTextTable"><textarea class="form-control" rows="1" id="comment">0.0</textarea></th>
+		  <th class = "centerTextTable"><textarea class="form-control" rows="1" id="comment">0.4</textarea></th>
+		  <th class = "centerTextTable"><textarea class="form-control" rows="1" id="comment">0.7</textarea></th>
+          <th class = "centerTextTable"><textarea class="form-control" rows="1" id="comment">1.0</textarea></th>
+          <th class = "centerTextTable"><i class="fas fa-plus-circle"></i></th>
+		</tr>
+		
+		<tr>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Contenido</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">No incluye las interfaces solicitadas</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Faltan la mayoria de lasinterfaces</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Solo faltan 1 o 2 interfaces</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Incluye todas las interfaces solicitadas</textarea></td>
+		</tr>
+		
+		<tr>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Calidad del material</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Presentación con muchos errores ortográficos, todas las imágenes son de baja resolución</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Algunos errores ortográficos, casi todas las imágenes son de baja resolución</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Pocos errores ortográficos, solo algunas imágenes son de baja resolución</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Pocos errores ortográficos, todas las imágenes son de buena resolución</textarea></td>
+		</tr>
+		
+		<tr>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Relación con requisitos funcionales</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Solo describe las interfaces, sin mencionar requisito alguno</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Solo para algunas de las interfaces explica cómo satisfacen los requisitos funcionales</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Para casi todas las interfaces, explica cómo satisfacen los requisitos funcionales</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Explica claramente como cada interfaz satisface los requisitos funcionales</textarea></td>
+		</tr>
+		
+		<tr>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Organización de la información</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">No se entiende la presentación porque no hay secuencia lógica de información</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Es difícil seguir la presentación, porque el presentador “salta” entre diapositivas </textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">La información está presentada en una secuencia lógica</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">La información es presentada en una forma lógica e interesante</textarea></td>
+		</tr>
+		
+		<tr>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Forma </textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">No se entiende lo que dice (en términos fonéticos y cinéticos) </textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Se entiende lo que dice la de manera parcial (su cuerpo no acompaña sus palabras) </textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal </textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Se da a entender siempre, destacando en su forma (pausas, dicción, contacto visual, gesticulación, otros)</textarea></td>
+		</tr>
+		
+		<tr>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Entusiasmo</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">No muestra interés en su entrega</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Se muestra algo negativo acerca de su entrega</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Ocasionalmente habla en forma positiva</textarea></td>
+		  <td class = "centerTextTable"><textarea class="form-control" rows="3" id="comment">Habla en forma positiva durante casi toda la presentación</textarea></td>
+        </tr>
+        
+        <tr >
+            <td class = "centerTextTable"><i class="fas fa-plus-circle"></i></td>
+        </tr>
+		
+		</table>
+		
+
+    </div>
+    
+    <div class="container" style="display:flex">
+
+        <button type="button" class= "btn btn-primary">Aplicar Cambios</button>
+        
+    </div>
+
+
+		<!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	
+	</body>
+</html>
