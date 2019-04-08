@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+
+        div.evaluacion{
+            background-color: #d9edf7;
+            border-color: #bce8f1;
+            color: #31708f;
+        }
+
+        div.dashbroad{
+            text-align: center;
+        }
+        div.fechas{
+            font-style: italic;
+        }
+
+        div.status {
+            justify-content: center;
+            display: inline-block;
+            margin: 0;
+            vertical-align: middle;
+            font-size: .6em;
+            border-radius: .5em;
+            padding: .4em .5em;
+            border-left: 0;
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+            color: #3c763d;
+        }    
+
+        td.evaluado{
+            justify-content: center;
+            margin: 0;
+            vertical-align: middle;
+            padding: .4em .5em;
+            border-left: 0;
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+            color: #3c763d;
+        }
+
+        td.pendiente{
+            margin: 0;
+            vertical-align: middle;
+            padding: .4em .5em;
+            border-left: 0;
+            background-color: #fff6cc;
+            border-color: #ffe5b3;
+            color: #8a6d3b;
+        }
+
+
+        td.centerTextTable_item:hover{
+            background-color: #469b25;
+        }
+        td.centerTextTable_item2:hover{
+            background-color: #f3f03cb7;;
+        }
+        tr.centerTextTable_item_add:hover{
+            background-color: #37383a42;
+        }
+
+        tr.main_table{
+            background: rgba(0,0,0,.03);
+        }
+
+        thead.main_heading_table{
+            background-color: gray;
+        }
+
+        td.evaluando{
+            margin: 0;
+            vertical-align: middle;
+            padding: .4em .5em;
+            border-left: 0;
+            background-color: #d9edf7;
+            border-color: #bce8f1;
+            color: #31708f;
+        }
+
+        .btn-lg {
+            padding: 13px 16px;
+        }
+
+ 
+    </style>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>fsociety</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+   <script src="../main.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+
+    
+</head>
+<body> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <img src="../../img/fsociety400x400.png" weight="60" height="60" class="d-inline-block align-top" alt="">
+                <a class="navbar-brand" href="../main.html">
+                        fsociety
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse w-100 order-3 dual-collapse2" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                        <a class="nav-link" href="../main.html">Inicio</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Secciones
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="../secciones/ver-secciones.html">Ver todas</a>
+                                        <a class="dropdown-item" href="../secciones/admin-secciones.html">Administrar</a>
+                                        </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Alumnos
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="../alumnos/ver-alumnos.html">Ver todos<span class="sr-only">(current)</span></a>
+                                        <a class="dropdown-item" href="../alumnos/resumen-alumnos.html">Ver resumen</a>
+                                        </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Grupos
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="../grupos/ver-grupos.html">Ver todos</a>
+                                        <a class="dropdown-item" href="../grupos/admin-grupos.html">Administrar</a>
+                                        </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Evaluadores
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="../evaluadores/ver-evaluadores.html">Ver todos</a>
+                                        <a class="dropdown-item" href="../evaluadores/admin-evaluadores.html">Administrar</a>
+                                        </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Rúbricas
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="../rubricas/ver-rubricas.html">Ver todas</a>
+                                        <a class="dropdown-item" href="../rubricas/admin-rubricas.html">Administrar</a>
+                                        </div>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="../instancias/instancias.html">Instancias</a>
+                                </li>
+                                <li class="nav-item active">
+                                        <a class="nav-link" href="../evaluar/evaluar.html">Evaluar</a>
+                                </li>
+                        </ul>
+                </div>
+        </nav>
+
+<body>
+    <div class="container">
+    <div class="dashbroad">
+        <div class="titulo">
+            <h1>
+                Evaluación Tarea 2 CC4001-01     
+                    <div class="status"> 
+                        Abierta   
+            </h1>
+        </div>
+        <div class = "fechas">
+            <h4>
+                <b>Fecha de Inicio: </b>Lunes 8 de abril 13:00 hrs.
+            </h4>
+            <h4>
+                <b>Fecha de Término:</b> Miércoles 10 de abril  23:59 hrs.
+            </h4>
+            <h4>
+                <b>Duración de las Presentaciones: </b>5 minutos.
+            </h4>
+        </div>
+    </div>
+    
+    <div id="accordion">
+
+        <!--Datos de la Evaluación-->   
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseZero" aria-expanded="false" aria-controls="collapseZero">
+                         Datos de la Evaluación
+                    </button>
+                </h5>
+            </div>
+                
+            <div id="collapseZero" class="collapse" aria-labelledby="headingZero" data-parent="#accordion">
+                <div class="card-body contrainer">
+                    <div class="table-responsive">          
+                        <table class="table">                                                      
+                            <tbody>
+                                <tr>
+                                    <th>Curso:</th>
+                                    <td>CC4401-01 2019-01</td>
+                                </tr>
+                                <tr>
+                                    <th>Fecha de Inicio:</th>
+                                    <td>Lunes 8 de abril 13:00 hrs.</td>
+                                </tr>
+                                <tr>
+                                    <th>Fecha de Término</th>
+                                    <td>Miércoles 10 de abril 23:59 hrs.</td>
+                                </tr>
+                                <tr>
+                                    <th>Duración de las Presentaciones:</th>
+                                    <td>5 minutos</td>
+                                </tr>
+                                <tr class="accordion-toggle">
+                                    <th>Rúbrica</th>
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse" data-target="#demo2">Ver Rúbrica</button>
+                                    </td>
+                                </tr>
+                        </table>
+ 
+                        <!--Editar Rúbrica-->   
+                        <div id="demo2" class="collapse" aria-labelledby="headingOne">
+                            <div class="container table-responsive">
+
+                           <table class="table table-bordered"> 
+                <tr> 
+                    <th class = "centerTextTable3">Puntajes</th>
+                    <th class = "centerTextTable3">0.0</th>
+                    <th class = "centerTextTable3">0.4</th>
+                    <th class = "centerTextTable3">0.7</th>
+                    <th class = "centerTextTable3">1.0</th>
+                </tr>
+                  
+                <tr>
+                    <td class = "centerTextTable">Contenido</td>
+                    <td class = "centerTextTable_item3">No incluye las interfaces solicitadas</td>
+                    <td class = "centerTextTable_item3">Faltan la mayoria de lasinterfaces</td>
+                    <td class = "centerTextTable_item3">Solo faltan 1 o 2 interfaces</td>
+                    <td class = "centerTextTable_item3">Incluye todas las interfaces solicitadas</td>
+                </tr>
+                  
+                <tr>
+                    <td class = "centerTextTable">Calidad del material</td>
+                    <td class = "centerTextTable_item3">Presentación con muchos errores ortográficos, todas las imágenes son de baja resolución</td>
+                    <td class = "centerTextTable_item3">Algunos errores ortográficos, casi todas las imágenes son de baja resolución</td>
+                    <td class = "centerTextTable_item3">Pocos errores ortográficos, solo algunas imágenes son de baja resolución</td>
+                    <td class = "centerTextTable_item3">Pocos errores ortográficos, todas las imágenes son de buena resolución</td>
+                </tr>
+                  
+                <tr>
+                    <td class = "centerTextTable">Relación con requisitos funcionales</td>
+                    <td class = "centerTextTable_item3">Solo describe las interfaces, sin mencionar requisito alguno</td>
+                    <td class = "centerTextTable_item3">Solo para algunas de las interfaces explica cómo satisfacen los requisitos funcionales</td>
+                    <td class = "centerTextTable_item3">Para casi todas las interfaces, explica cómo satisfacen los requisitos funcionales</td>
+                    <td class = "centerTextTable_item3">Explica claramente como cada interfaz satisface los requisitos funcionales</td>
+                </tr>
+                  
+                <tr>
+                    <td class = "centerTextTable">Organización de la información</td>
+                    <td class = "centerTextTable_item3">No se entiende la presentación porque no hay secuencia lógica de información</td>
+                    <td class = "centerTextTable_item3">Es difícil seguir la presentación, porque el presentador “salta” entre diapositivas </td>
+                    <td class = "centerTextTable_item3">La información está presentada en una secuencia lógica</td>
+                    <td class = "centerTextTable_item3">La información es presentada en una forma lógica e interesante</td>
+                </tr>
+                  
+                <tr>
+                    <td class = "centerTextTable">Forma </td>
+                    <td class = "centerTextTable_item3">No se entiende lo que dice (en términos fonéticos y cinéticos) </td>
+                    <td class = "centerTextTable_item3">Se entiende lo que dice la de manera parcial (su cuerpo no acompaña sus palabras) </td>
+                    <td class = "centerTextTable_item3">Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal </td>
+                    <td class = "centerTextTable_item3">Se da a entender siempre, destacando en su forma (pausas, dicción, contacto visual, gesticulación, otros)</td>
+                </tr>
+                  
+                <tr>
+                    <td class = "centerTextTable">Entusiasmo</td>
+                    <td class = "centerTextTable_item3">No muestra interés en su entrega</td>
+                    <td class = "centerTextTable_item3">Se muestra algo negativo acerca de su entrega</td>
+                    <td class = "centerTextTable_item3">Ocasionalmente habla en forma positiva</td>
+                    <td class = "centerTextTable_item3">Habla en forma positiva durante casi toda la presentación</td>
+                </tr>
+
+                  
+            </table>
+                            </div>
+                        </div>
+
+                                
+                        <table class="table">
+                            <tbody>    
+                                <tr>
+                                    <th>Evaluadores &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+                                    <td>           
+                                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse" data-target="#ver_evaluadores">Ver Evaluadores</button>
+                                  </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+            
+                               
+
+
+                    <!--Editar Evaluadores-->   
+                    <div id="editar_evaluadores" class="collapse" aria_labelledby="editar_evaluadores">
+                                                    <div class="table-title container">
+                                                            <div class="row" style="float:left;
+                                                            justify-content: space-between; margin-bottom: 10px">
+                                                                <div>
+                                                                    <button type="button" class="btn btn-info add-new btn-sm" ><i class="fa fa-plus " ></i> Agregar</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="table-responsive">          
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>#</th>
+                                                                        <th>Nombre</th>
+                                                                        <th>Apellido</th>
+                                                                        <th>Acción</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                      
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>La</td>
+                                                                        <td>Profesora</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td>Auxiliar</td>
+                                                                        <td>Uno</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3</td>
+                                                                        <td>Auxiliar</td>
+                                                                        <td>Dos</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>4</td>
+                                                                        <td>Auxiliar</td>
+                                                                        <td>Tres</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                    </div>
+
+                    <!--Ver Evaluadores-->   
+                    <div id="ver_evaluadores" class="collapse" aria_labelledby="ver_evaluadores">
+                                                    <div class="table-title container">
+                                                        </div>
+                                                        <div class="table-responsive">          
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>#</th>
+                                                                        <th>Nombre</th>
+                                                                        <th>Apellido</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                      
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>La</td>
+                                                                        <td>Profesora</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td>Auxiliar</td>
+                                                                        <td>Uno</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3</td>
+                                                                        <td>Auxiliar</td>
+                                                                        <td>Dos</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>4</td>
+                                                                        <td>Auxiliar</td>
+                                                                        <td>Tres</td>
+ 
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                    </div>
+                </div>
+             </div>                    
+        </div>
+
+        <!--Estado de las Evaluaciones-->
+        <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          Estado de las Evaluaciones
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="table-responsive">          
+                                      <table class="table">
+                                        <thead class="main_heading_table">
+                                          <tr>
+                                            <th></th>
+                                            <th>Equipo</th>
+                                            <th>Estado</th>
+
+                                          </tr>
+                                        </thead>
+
+                                        <tbody>
+                                                <tr class="clickable main_table" data-toggle="collapse" data-target="#group-of-rows-3" aria-expanded="false" aria-controls="group-of-rows-3">
+                                                    <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+                                                    <td>fsociety</td>
+                                                    <td class="evaluando"> Evaluando</td>
+           
+                                                </tr>
+    
+                                            </tbody>
+                                                
+                                            <thead id="group-of-rows-3" class="collapse main_table">
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Alumno</th>
+                                                        <th>Presenta en esta evaluación</th>
+                                                    </tr>                           
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>Juan Burgos</td>
+                                                        <td> <i class="fa fa-times" style="color: red"></i>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>Javier Donoso</td>
+                                                        <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>Daniela Leiva</td>
+                                                        <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                    </tr>
+                                    
+                                                    <tr>  
+                                                        <td></td>                                               
+                                                        <td>José Véliz</td>
+                                                        <td> <i class="fa fa-times" style="color: red"></i>
+        
+                                                    </tr>
+        
+                                            </thead>
+
+                                        <tbody>
+                                                <tr class="clickable main_table" data-toggle="collapse" data-target="#group-of-rows-2" aria-expanded="false" aria-controls="group-of-rows-2">
+                                                    <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+                                                <td>ReAL Soluciones</td>
+                                                <td class="pendiente"> Pendiente</td>
+                                                </tr>
+    
+                                            </tbody>
+                                                
+                                            <thead id="group-of-rows-2" class="collapse">
+                                                            <tr>
+                                                                <td></td>
+                                                                <th>Alumno</th>
+                                                                <th>Presenta en esta evaluación</th>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td></td>
+                                                                    <td>Juan Pérez</td>
+                                                                    <td> <i class="fa fa-times" style="color: red"></i>
+                                                                    </td>
+                                                                </tr>
+                    
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>Juan Pérez</td>
+                                                                    <td> <i class="fa fa-times" style="color: red"></i>
+                    
+                                                                </tr>
+                    
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>Juan Pérez</td>
+                                                                    <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                </tr>
+                                                
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>Juan Pérez</td>
+                                                                    <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                </tr>
+                                            </thead>
+
+
+
+                                                <tbody>
+                                                        <tr class="clickable main_table" data-toggle="collapse" data-target="#group-of-rows-4" aria-expanded="false" aria-controls="group-of-rows-4">
+                                                            <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+                                                            <td>Fantastic Four Development</td>
+                                                            <td class="pendiente"> Pendiente</td>
+                                                        </tr>
+            
+                                                    </tbody>
+                                                        
+                                                    <thead id="group-of-rows-4" class="collapse">
+                                                            <tr>
+                                                                    <td></td>
+                                                                    <th>Alumno</th>
+                                                                    <th>Presenta en esta evaluación</th>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td></td>
+                                                                        <td>Juan Pérez</td>
+                                                                        <td> <i class="fa fa-times" style="color: red"></i>
+                                                                        </td>
+                                                                    </tr>
+                        
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Juan Pérez</td>
+                                                                        <td> <i class="fa fa-times" style="color: red"></i>
+                        
+                                                                    </tr>
+                        
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Juan Pérez</td>
+                                                                        <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                    </tr>
+                                                    
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Juan Pérez</td>
+                                                                        <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                    </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                            <tr class="clickable main_table" data-toggle="collapse" data-target="#group-of-rows-5" aria-expanded="false" aria-controls="group-of-rows-5">
+                                                                <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+                                                                <td>Electronic Operations</td>
+                                                                <td class="pendiente"> Pendiente</td>
+                                                            </tr>
+                
+                                                        </tbody>
+                                                            
+                                                        <thead id="group-of-rows-5" class="collapse">
+                                                            
+                                                            <tr>
+                                                                    <td></td>
+                                                                    <th>Alumno</th>
+                                                                    <th>Presenta en esta evaluacion</th>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td></td>
+                                                                        <td>Juan Pérez</td>
+                                                                        <td> <i class="fa fa-times" style="color: red"></i>
+                                                                        </td>
+                                                                    </tr>
+                        
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Juan Pérez</td>
+                                                                        <td> <i class="fa fa-times" style="color: red"></i>
+                        
+                                                                    </tr>
+                        
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Juan Pérez</td>
+                                                                        <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                    </tr>
+                                                    
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>Juan Pérez</td>
+                                                                        <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                    </tr>
+                
+                                                        </thead>
+
+ 
+
+                                                            <tbody>
+                                                                    <tr class="clickable main_table" data-toggle="collapse" data-target="#group-of-rows-7" aria-expanded="false" aria-controls="group-of-rows-7">
+                                                                        <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+                                                                        <td>BC&ML 007</td>
+                                                                        <td class="pendiente"> Pendiente</td>
+                                                                    </tr>
+                        
+                                                                </tbody>
+                                                                    
+                                                                <thead id="group-of-rows-7" class="collapse">
+                                                                        <tr>
+                                                                                <td></td>
+                                                                                <th>Alumno</th>
+                                                                                <th>Presenta en esta evaluación</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                    <td></td>
+                                                                                    <td>Juan Pérez</td>
+                                                                                    <td> <i class="fa fa-times" style="color: red"></i>
+                                                                                    </td>
+                                                                                </tr>
+                                    
+                                                                                <tr>
+                                                                                    <td></td>
+                                                                                    <td>Juan Pérez</td>
+                                                                                    <td> <i class="fa fa-times" style="color: red"></i>
+                                    
+                                                                                </tr>
+                                    
+                                                                                <tr>
+                                                                                    <td></td>
+                                                                                    <td>Juan Pérez</td>
+                                                                                    <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                                </tr>
+                                                                
+                                                                                <tr>
+                                                                                    <td></td>
+                                                                                    <td>Juan Pérez</td>
+                                                                                    <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                                </tr>
+                        
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                    <tr class="clickable main_table" data-toggle="collapse" data-target="#group-of-rows-1" aria-expanded="false" aria-controls="group-of-rows-1">
+                                                                                <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+                                                                                <td> SWJJ Solutions</td>
+                                                                                <td class="evaluado"> Evaluado</td>
+                                                                            </tr>
+                                                                    </tbody>
+
+                                                                    <thead id="group-of-rows-1" class="collapse">
+                                                                            <tr>
+                                                                                <th></th>
+                                                                                <th>Alumno</th>
+                                                                                <th>Presenta en esta evaluación</th>
+                                                                            </tr>
+                                                                            
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>Juan Pérez</td>
+                                                                                <td> <i class="fa fa-times" style="color: red"></i>
+                                                                                </td>
+                                                                            </tr>
+                                    
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>Juan Pérez</td>
+                                                                                <td> <i class="fa fa-times" style="color: red"></i>
+                                    
+                                                                            </tr>
+                                    
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>Juan Pérez</td>
+                                                                                <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                            </tr>
+                                                                
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>Juan Pérez</td>
+                                                                                <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                            </tr>
+                                
+                                                                    </thead>
+                                                                            
+
+
+                                                                    <tbody>
+                                                                            <tr class="clickable main_table" data-toggle="collapse" data-target="#group-of-rows-6" aria-expanded="false" aria-controls="group-of-rows-6">
+                                                                                <td><i class="fa fa-plus" aria-hidden="true"></i></td>
+                                                                                <td>GPOM-FORCE</td>
+                                                                                <td class="evaluado"> Evaluado</td>
+                                                                            </tr>
+                                
+                                                                    </tbody>
+
+                                                                    
+                                                                            
+                                                                    <thead id="group-of-rows-6" class="collapse">
+                                                                            <tr>
+                                                                                <th></th>
+                                                                                <th>Alumno</th>
+                                                                                <th>Presenta en esta evaluación</th>
+                                                                            </tr>
+                                                                            
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>Juan Pérez</td>
+                                                                                <td> <i class="fa fa-times" style="color: red"></i>
+                                                                                </td>
+                                                                            </tr>
+                                    
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>Juan Pérez</td>
+                                                                                <td> <i class="fa fa-times" style="color: red"></i>
+                                    
+                                                                            </tr>
+                                    
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>Juan Pérez</td>
+                                                                                <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                            </tr>
+                                                                
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>Juan Pérez</td>
+                                                                                <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                            </tr>
+                                
+                                                                    </thead>
+
+
+
+                                                             
+                                        
+                                        </tbody>
+                                      </table>
+                            </div>
+                        </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+    <div style="padding:20px">
+        <h1>Estado: Evaluando a Equipo "fsociety" 
+        </h1>
+    </div>
+
+    <div id="accordion">
+
+            <!--Evaluar a Persona 1-->   
+             <div class="card">
+                 <div class="card-header evaluacion" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Evaluar a Daniela Leiva
+                        </button>
+                    </h5>
+                </div>
+                
+                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="container table-responsive">
+                        <table class="table table-bordered"> 
+                            <tr> 
+                                <th class = "centerTextTable">Puntajes</th>
+                                <th class = "centerTextTable">0.0</th>
+                                <th class = "centerTextTable">0.4</th>
+                                <th class = "centerTextTable">0.7</th>
+                                <th class = "centerTextTable">1.0</th>
+                            </tr>
+                                  
+                            <tr>
+                                <td class = "centerTextTable">Contenido</td>
+                                <td id="25" class = "centerTextTable_item" onclick="myFunction('25')">No incluye las interfaces solicitadas</td>
+                                <td id="26" class = "centerTextTable_item" onclick="myFunction('26')">Faltan la mayoria de lasinterfaces</td>
+                                <td id="27" class = "centerTextTable_item" onclick="myFunction('27')">Solo faltan 1 o 2 interfaces</td>
+                                <td id="28" class = "centerTextTable_item" onclick="myFunction('28')">Incluye todas las interfaces solicitadas</td>
+                            </tr>
+                                  
+                            <tr>
+                                <td iclass = "centerTextTable">Calidad del material</td>
+                                <td id="29" class = "centerTextTable_item" onclick="myFunction('29')">Presentación con muchos errores ortográficos, todas las imágenes son de baja resolución</td>
+                                <td id="30" class = "centerTextTable_item" onclick="myFunction('30')">Algunos errores ortográficos, casi todas las imágenes son de baja resolución</td>
+                                <td id="31" class = "centerTextTable_item" onclick="myFunction('31')">Pocos errores ortográficos, solo algunas imágenes son de baja resolución</td>
+                                <td id="32" class = "centerTextTable_item" onclick="myFunction('32')">Pocos errores ortográficos, todas las imágenes son de buena resolución</td>
+                            </tr>
+                                  
+                            <tr>
+                                <td class = "centerTextTable">Relación con requisitos funcionales</td>
+                                <td id="33" class = "centerTextTable_item" onclick="myFunction('33')">Solo describe las interfaces, sin mencionar requisito alguno</td>
+                                <td id="34" class = "centerTextTable_item" onclick="myFunction('34')">Solo para algunas de las interfaces explica cómo satisfacen los requisitos funcionales</td>
+                                <td id="35" class = "centerTextTable_item" onclick="myFunction('35')">Para casi todas las interfaces, explica cómo satisfacen los requisitos funcionales</td>
+                                <td id="36" class = "centerTextTable_item" onclick="myFunction('36')">Explica claramente como cada interfaz satisface los requisitos funcionales</td>
+                            </tr>
+                                  
+                            <tr>
+                                <td class = "centerTextTable">Organización de la información</td>
+                                <td id="37" class = "centerTextTable_item" onclick="myFunction('37')">No se entiende la presentación porque no hay secuencia lógica de información</td>
+                                <td id="38" class = "centerTextTable_item" onclick="myFunction('38')">Es difícil seguir la presentación, porque el presentador “salta” entre diapositivas </td>
+                                <td id="39" class = "centerTextTable_item" onclick="myFunction('39')">La información está presentada en una secuencia lógica</td>
+                                <td id="40" class = "centerTextTable_item" onclick="myFunction('40')">La información es presentada en una forma lógica e interesante</td>
+                            </tr>
+                                  
+                            <tr>
+                                <td class = "centerTextTable">Forma </td>
+                                <td id="41" class = "centerTextTable_item" onclick="myFunction('41')">No se entiende lo que dice (en términos fonéticos y cinéticos) </td>
+                                <td id="42" class = "centerTextTable_item" onclick="myFunction('42')">Se entiende lo que dice la de manera parcial (su cuerpo no acompaña sus palabras) </td>
+                                <td id="43" class = "centerTextTable_item" onclick="myFunction('43')">Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal </td>
+                                <td id="44" class = "centerTextTable_item" onclick="myFunction('44')">Se da a entender siempre, destacando en su forma (pausas, dicción, contacto visual, gesticulación, otros)</td>
+                            </tr>
+                                  
+                            <tr>
+                                <td class = "centerTextTable">Entusiasmo</td>
+                                <td id="45" class = "centerTextTable_item" onclick="myFunction('45')">No muestra interés en su entrega</td>
+                                <td id="46" class = "centerTextTable_item" onclick="myFunction('46')">Se muestra algo negativo acerca de su entrega</td>
+                                <td id="47" class = "centerTextTable_item" onclick="myFunction('47')">Ocasionalmente habla en forma positiva</td>
+                                <td id="48" class = "centerTextTable_item" onclick="myFunction('48')">Habla en forma positiva durante casi toda la presentación</td>
+                            </tr>                    
+                        </table>   
+                        <button type="button" class="btn btn-danger " disabled style="float:right"><i ></i> Finalizar Evaluación</button>
+
+                        <button type="button" class="btn btn-success " style="float:right"><i ></i> Confirmar Puntajes</button>                     </div>
+
+                                    
+                </div>
+            </div>
+
+            <!--Evaluar a Persona 2-->   
+            <div class="card">
+                    <div class="card-header evaluacion" id="headingFive">
+                       <h5 class="mb-0">
+                           <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                               Evaluar a Javier Donoso
+                           </button>
+                       </h5>
+                   </div>
+                   
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                           <div class="container table-responsive">
+                           <table class="table table-bordered"> 
+                               <tr> 
+                                   <th class = "centerTextTable">Puntajes</th>
+                                   <th class = "centerTextTable">0.0</th>
+                                   <th class = "centerTextTable">0.4</th>
+                                   <th class = "centerTextTable">0.7</th>
+                                   <th class = "centerTextTable">1.0</th>
+                               </tr>
+                                     
+                               <tr>
+                                   <td class = "centerTextTable">Contenido</td>
+                                   <td id="1" class = "centerTextTable_item" onclick="myFunction('1')">No incluye las interfaces solicitadas</td>
+                                   <td id="2" class = "centerTextTable_item" onclick="myFunction('2')">Faltan la mayoria de lasinterfaces</td>
+                                   <td id="3" class = "centerTextTable_item" onclick="myFunction('3')">Solo faltan 1 o 2 interfaces</td>
+                                   <td id="4" class = "centerTextTable_item" onclick="myFunction('4')">Incluye todas las interfaces solicitadas</td>
+                               </tr>
+                                     
+                               <tr>
+                                   <td iclass = "centerTextTable">Calidad del material</td>
+                                   <td id="5" class = "centerTextTable_item" onclick="myFunction('5')">Presentación con muchos errores ortográficos, todas las imágenes son de baja resolución</td>
+                                   <td id="6" class = "centerTextTable_item" onclick="myFunction('6')">Algunos errores ortográficos, casi todas las imágenes son de baja resolución</td>
+                                   <td id="7" class = "centerTextTable_item" onclick="myFunction('7')">Pocos errores ortográficos, solo algunas imágenes son de baja resolución</td>
+                                   <td id="8" class = "centerTextTable_item" onclick="myFunction('8')">Pocos errores ortográficos, todas las imágenes son de buena resolución</td>
+                               </tr>
+                                     
+                               <tr>
+                                   <td class = "centerTextTable">Relación con requisitos funcionales</td>
+                                   <td id="9" class = "centerTextTable_item" onclick="myFunction('9')">Solo describe las interfaces, sin mencionar requisito alguno</td>
+                                   <td id="10" class = "centerTextTable_item" onclick="myFunction('10')">Solo para algunas de las interfaces explica cómo satisfacen los requisitos funcionales</td>
+                                   <td id="11" class = "centerTextTable_item" onclick="myFunction('11')">Para casi todas las interfaces, explica cómo satisfacen los requisitos funcionales</td>
+                                   <td id="12" class = "centerTextTable_item" onclick="myFunction('12')">Explica claramente como cada interfaz satisface los requisitos funcionales</td>
+                               </tr>
+                                     
+                               <tr>
+                                   <td class = "centerTextTable">Organización de la información</td>
+                                   <td id="13" class = "centerTextTable_item" onclick="myFunction('13')">No se entiende la presentación porque no hay secuencia lógica de información</td>
+                                   <td id="14" class = "centerTextTable_item" onclick="myFunction('14')">Es difícil seguir la presentación, porque el presentador “salta” entre diapositivas </td>
+                                   <td id="15" class = "centerTextTable_item" onclick="myFunction('15')">La información está presentada en una secuencia lógica</td>
+                                   <td id="16" class = "centerTextTable_item" onclick="myFunction('16')">La información es presentada en una forma lógica e interesante</td>
+                               </tr>
+                                     
+                               <tr>
+                                   <td class = "centerTextTable">Forma </td>
+                                   <td id="17" class = "centerTextTable_item" onclick="myFunction('17')">No se entiende lo que dice (en términos fonéticos y cinéticos) </td>
+                                   <td id="18" class = "centerTextTable_item" onclick="myFunction('18')">Se entiende lo que dice la de manera parcial (su cuerpo no acompaña sus palabras) </td>
+                                   <td id="19" class = "centerTextTable_item" onclick="myFunction('19')">Se da a entender, presentando de manera eficiente y adecuado lenguaje corporal </td>
+                                   <td id="20" class = "centerTextTable_item" onclick="myFunction('20')">Se da a entender siempre, destacando en su forma (pausas, dicción, contacto visual, gesticulación, otros)</td>
+                               </tr>
+                                     
+                               <tr>
+                                   <td class = "centerTextTable">Entusiasmo</td>
+                                   <td id="21" class = "centerTextTable_item" onclick="myFunction('21')">No muestra interés en su entrega</td>
+                                   <td id="22" class = "centerTextTable_item" onclick="myFunction('22')">Se muestra algo negativo acerca de su entrega</td>
+                                   <td id="23" class = "centerTextTable_item" onclick="myFunction('23')">Ocasionalmente habla en forma positiva</td>
+                                   <td id="24" class = "centerTextTable_item" onclick="myFunction('24')">Habla en forma positiva durante casi toda la presentación</td>
+                               </tr>                    
+                           </table>  
+                           <button type="button" class="btn btn-danger " disabled style="float:right"><i ></i> Finalizar Evaluación</button>
+
+                           <button type="button" class="btn btn-success " style="float:right"><i ></i> Confirmar Puntajes</button> 
+                       </div>
+   
+                                       
+                   </div>
+            </div>
+    </div>
+    
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+    function myFunction(ide) {
+        document.getElementById(ide).style.backgroundColor = "green";
+    }
+</script>
+
+</body>
+
+    
+  
+
+</html>
