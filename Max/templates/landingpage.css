@@ -1,4 +1,10 @@
-.btn-label {
+html { 
+    background: url(../img/woods.jpg) no-repeat center fixed; 
+    background-size: cover;
+  }
+
+  
+  .btn-label {
     position: left;
     /* left: -22px; */
     display: inline-block;
@@ -15,3 +21,13 @@
 .btn {
     margin-bottom: 10px;
 }
+
+.central-container-transparent {
+    background-color:transparent;
+    padding: 0.7%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 3%;
+    margin-left:3%;
+}
+
