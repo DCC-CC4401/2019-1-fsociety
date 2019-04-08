@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>fsociety</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Estilos locales, Boostrap 4 -->
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./landingpage.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="main.js"></script>
+    <!-- Íconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <title>fsociety</title>
 </head>
-<body> 
+<body>
+    <!-- Header y Navegation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <img src="../img/fsociety400x400.png" weight="60" height="60" class="d-inline-block align-top" alt="">
         <a class="navbar-brand" href="main.html">
@@ -78,27 +84,119 @@
         </div>
     </nav>
 
+    <!-- Contenido -->
     <div class="cointainer central-container">
-        <div class="row justify-content-md-center" style="margin: auto">
-            <div class="col-sm-4" style="margin: auto;padding: 2%;">
-                    
+        <div class="row justify-content-md-center">
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header text-center">Últimas evaluaciones</h5>
+                    <div class="card-body text-center">
+                            <table class="table table-sm table-responsive-sm">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Estado</th>
+                                        <th scope="col">Curso</th>
+                                        <th scope="col">Inicio</th>
+                                        <th scope="col">Fin</th>
+                                        <th scope="col">Rúbrica</th>
+                                        <th scope="col">Acciones</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">58</th>
+                                        <td><p><i class="fas fa-clock"></i> Abierta</p></button></td>
+                                        <td>CC4401-1</td>
+                                        <td>16:09</td>
+                                        <td> -- </td>
+                                        <td> Rúbrica Tarea 2 </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i>  Ficha</button>
+                                            <button type="button" class="btn btn-success btn-sm"><i class="fas fa-file-export"></i> Exportar</button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">57</th>
+                                        <td><p><i class="fas fa-check"></i> Cerrada</p></td>
+                                        <td>CC4401-2</td>
+                                        <td>16:09</td>
+                                        <td> -- </td>
+                                        <td> Rúbrica Tarea 2 </td>
+                                        <td>
+                                                <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i>  Ficha</button>
+                                                <button type="button" class="btn btn-success btn-sm"><i class="fas fa-file-export"></i> Exportar</button>
+                                            </td>
+                                      </tr>
+                                      <th scope="row">56</th>
+                                        <td><p><i class="fas fa-check"></i> Cerrada</p></td>
+                                        <td>CC4401-2</td>
+                                        <td>16:09</td>
+                                        <td> -- </td>
+                                        <td> Rúbrica Tarea 2 </td>
+                                        <td>
+                                                <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-file-alt"></i>  Ficha</button>
+                                                <button type="button" class="btn btn-success btn-sm"><i class="fas fa-file-export"></i> Exportar</button>
+                                            </td>
+                                    </tbody>
+                                  </table>
+
+                        <hr>
+                        <div class="row justify-content-end">
+                                <button type="button" class="btn btn-info" style="margin:1%;"><i class="fas fa-eye"></i>  Ver todas</a>
+                                    <button type="button" class="btn btn-danger" style="margin:1%;"><i class="fas fa-user-cog"></i>  Administrar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-6" style="margin: auto;padding: 2%;">
-        
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header text-center">Evaluaciones</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary float-right">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-2" style="margin: auto;padding: 2%;">
-                
-            </div>
+            
         </div>
-        <div class="row justify-content-md-center" style="margin: auto">
-            <div class="col-sm-4" style="margin: auto;padding: 2%;">
-                
+        <div class="row justify-content-md-center">
+                <div class="col-sm-6">
+                        <div class="card">
+                            <h5 class="card-header text-center">Evaluadores</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary float-right">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <h5 class="card-header text-center">Cursos</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary float-right">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-6" style="margin: auto;padding: 2%;">
-                
-            </div>
-            <div class="col-sm-2" style="margin: auto;padding: 2%;">
-            </div>
+            
+        </div>
+        <div class="row justify-content-md-center">
+                <div class="col-sm-6">
+                        <div class="card">
+                            <h5 class="card-header text-center">Rúbricas</h5>
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary float-right">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                    </div>
         </div>
     </div>
     
