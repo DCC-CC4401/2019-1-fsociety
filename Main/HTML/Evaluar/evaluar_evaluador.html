@@ -218,6 +218,10 @@
                                     <td>CC4401-01 2019-01</td>
                                 </tr>
                                 <tr>
+                                    <th>Nombre de la Evaluación:</th>
+                                    <td>Tarea 2</td>
+                                </tr>
+                                <tr>
                                     <th>Fecha de Inicio:</th>
                                     <td>Lunes 8 de abril 13:00 hrs.</td>
                                 </tr>
@@ -315,69 +319,7 @@
                             </tbody>
                         </table>
 
-            
-                               
-
-
-                    <!--Editar Evaluadores-->   
-                    <div id="editar_evaluadores" class="collapse" aria_labelledby="editar_evaluadores">
-                                                    <div class="table-title container">
-                                                            <div class="row" style="float:left;
-                                                            justify-content: space-between; margin-bottom: 10px">
-                                                                <div>
-                                                                    <button type="button" class="btn btn-info add-new btn-sm" ><i class="fa fa-plus " ></i> Agregar</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="table-responsive">          
-                                                            <table class="table">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>#</th>
-                                                                        <th>Nombre</th>
-                                                                        <th>Apellido</th>
-                                                                        <th>Acción</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                      
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>1</td>
-                                                                        <td>La</td>
-                                                                        <td>Profesora</td>
-                                                                        <td>
-                                                                            <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>2</td>
-                                                                        <td>Auxiliar</td>
-                                                                        <td>Uno</td>
-                                                                        <td>
-                                                                            <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>3</td>
-                                                                        <td>Auxiliar</td>
-                                                                        <td>Dos</td>
-                                                                        <td>
-                                                                            <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>4</td>
-                                                                        <td>Auxiliar</td>
-                                                                        <td>Tres</td>
-                                                                        <td>
-                                                                            <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                    </div>
-
+        
                     <!--Ver Evaluadores-->   
                     <div id="ver_evaluadores" class="collapse" aria_labelledby="ver_evaluadores">
                                                     <div class="table-title container">
@@ -436,11 +378,13 @@
                     <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="table-responsive">          
                                       <table class="table">
-                                        <thead class="main_heading_table">
+                                        <thead class="main_heading_table bg-primary text-white">
                                           <tr>
                                             <th></th>
                                             <th>Equipo</th>
                                             <th>Estado</th>
+                                            <th></th>
+
 
                                           </tr>
                                         </thead>
@@ -450,6 +394,7 @@
                                                     <td><i class="fa fa-plus" aria-hidden="true"></i></td>
                                                     <td>fsociety</td>
                                                     <td class="evaluando"> Evaluando</td>
+                                                    <td></td>
            
                                                 </tr>
     
@@ -492,6 +437,8 @@
                                                     <td><i class="fa fa-plus" aria-hidden="true"></i></td>
                                                 <td>ReAL Soluciones</td>
                                                 <td class="pendiente"> Pendiente</td>
+                                                <td></td>
+
                                                 </tr>
     
                                             </tbody>
@@ -536,6 +483,7 @@
                                                             <td><i class="fa fa-plus" aria-hidden="true"></i></td>
                                                             <td>Fantastic Four Development</td>
                                                             <td class="pendiente"> Pendiente</td>
+                                                            <td></td>
                                                         </tr>
             
                                                     </tbody>
@@ -578,6 +526,8 @@
                                                                 <td><i class="fa fa-plus" aria-hidden="true"></i></td>
                                                                 <td>Electronic Operations</td>
                                                                 <td class="pendiente"> Pendiente</td>
+                                                                <td></td>
+
                                                             </tr>
                 
                                                         </tbody>
@@ -624,6 +574,8 @@
                                                                         <td><i class="fa fa-plus" aria-hidden="true"></i></td>
                                                                         <td>BC&ML 007</td>
                                                                         <td class="pendiente"> Pendiente</td>
+                                                                        <td></td>
+
                                                                     </tr>
                         
                                                                 </tbody>
@@ -667,6 +619,8 @@
                                                                                 <td><i class="fa fa-plus" aria-hidden="true"></i></td>
                                                                                 <td> SWJJ Solutions</td>
                                                                                 <td class="evaluado"> Evaluado</td>
+                                                                                <td><button type="button" class="btn btn-warning" >Editar Puntajes</button></td>
+
                                                                             </tr>
                                                                     </tbody>
 
@@ -712,6 +666,8 @@
                                                                                 <td><i class="fa fa-plus" aria-hidden="true"></i></td>
                                                                                 <td>GPOM-FORCE</td>
                                                                                 <td class="evaluado"> Evaluado</td>
+                                                                                <td><button type="button" class="btn btn-warning" >Editar Puntajes</button></td>
+
                                                                             </tr>
                                 
                                                                     </tbody>
@@ -771,6 +727,8 @@
     <div style="padding:20px">
         <h1>Estado: Evaluando a Equipo "fsociety" 
         </h1>
+        <h4> Presione los nombres de los alumnos para evaluarlos.
+        </h4>
     </div>
 
     <div id="accordion">
