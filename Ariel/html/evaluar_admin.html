@@ -1,3 +1,5 @@
+<!--@autor Ariel Barraza-->   
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -177,7 +179,7 @@
             <h1>
                 Evaluación Tarea 2 CC4001-01     
                     <div class="status"> 
-                        Activa   
+                        Abierta   
                     </div>
                             <button type="button" class="btn btn-danger">Cerrar Evaluación</button>
                             <button type="button" class="btn btn-info" disabled>Exportar Datos</button>
@@ -597,8 +599,8 @@
                                                             <tr>
                                                                 <td></td>
                                                                 <th>Alumno</th>
-                                                                <th>Ha presentado</th>
-                                                                <th>Presenta hoy</th>
+                                                                <th>Ha presentado durante el semestre</th>
+                                                                <th>Presenta en esta evaluacion</th>
                                                             </tr>
                                                             <tr>
                                                                     <td></td>
@@ -648,8 +650,8 @@
                                                             <tr>
                                                                     <td></td>
                                                                     <th>Alumno</th>
-                                                                    <th>Ha presentado</th>
-                                                                    <th>Presenta hoy</th>
+                                                                    <th>Ha presentado durante el semestre</th>
+                                                                    <th>Presenta en esta evaluación</th>
                                                                 </tr>
                                                                 <tr>
                                                                         <td></td>
@@ -698,8 +700,8 @@
                                                             <tr>
                                                                     <td></td>
                                                                     <th>Alumno</th>
-                                                                    <th>Ha presentado</th>
-                                                                    <th>Presenta hoy</th>
+                                                                    <th>Ha presentado durante el semestre</th>
+                                                                    <th>Presenta en esta evaluacion</th>
                                                                 </tr>
                                                                 <tr>
                                                                         <td></td>
@@ -750,8 +752,8 @@
                                                                         <tr>
                                                                                 <td></td>
                                                                                 <th>Alumno</th>
-                                                                                <th>Ha presentado</th>
-                                                                                <th>Presenta hoy</th>
+                                                                                <th>Ha presentado durante el semestre</th>
+                                                                                <th>Presenta en esta evaluacion</th>
                                                                             </tr>
                                                                             <tr>
                                                                                     <td></td>
@@ -785,6 +787,9 @@
                         
                                                                     </thead>
 
+
+                                                                    
+
                                                                     <tbody>
                                                                     <tr class="clickable main_table" data-toggle="collapse" data-target="#group-of-rows-1" aria-expanded="false" aria-controls="group-of-rows-1">
                                                                                 <td><i class="fa fa-plus" aria-hidden="true"></i></td>
@@ -794,6 +799,47 @@
                                                                                     <td><button type="button" class="btn btn-warning" >Editar Puntajes</button></td>
                                                                             </tr>
                                                                     </tbody>
+
+                                                                    <thead id="group-of-rows-1" class="collapse">
+                                                                            <tr>
+                                                                                <th></th>
+                                                                                <th>Alumno</th>
+                                                                                <th>Ha presentado durante el semestre</th>
+                                                                                <th>Presenta en esta evaluación</th>
+                                                                            </tr>
+                                                                            
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                    <td>Juan Pérez</td>
+                                                                                    <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                                    <td> <button type="button" class="btn btn-danger" ><i class="fa fa-times" style="color: white"></i></button>  
+                                                                                    </td>
+                                                                                </tr>
+                                    
+                                                                                <tr>
+                                                                                    <td></td>
+                                                                                    <td>Juan Pérez</td>
+                                                                                    <td> <i class="fa fa-times" style="color: red"></i>
+                                                                                        <td> <button type="button" class="btn btn-success" ><i class="fas fa-check" style="color: white"></i></button>  
+                                    
+                                                                                </tr>
+                                    
+                                                                                <tr>
+                                                                                    <td></td>
+                                                                                    <td>Juan Pérez</td>
+                                                                                    <td> <i class="fa fa-times" style="color: red"></i>
+                                                                                        <td> <button type="button" class="btn btn-danger" ><i class="fa fa-times" style="color: white"></i></button>  
+                                                                                        </tr>
+                                                                
+                                                                                <tr>
+                                                                                    <th></th>
+                                                                                    <td>Juan Pérez</td>
+                                                                                    <td><i class="fas fa-check" style="color: green"></i> </td>
+                                                                                    <td> <button type="button" class="btn btn-success" ><i class="fas fa-check" style="color: white"></i></button>  
+                                                                                    </tr>
+                                
+                                                                    </thead>
+
                                                                             
 
 
@@ -810,37 +856,41 @@
                                                                             
                                                                     <thead id="group-of-rows-6" class="collapse">
                                                                             <tr>
+                                                                                <th></th>
                                                                                 <th>Alumno</th>
-                                                                                <th>Ha presentado</th>
-                                                                                <th>Presenta hoy</th>
-                                                                                <th>Acción</th>
+                                                                                <th>Ha presentado durante el semestre</th>
+                                                                                <th>Presenta en esta evaluación</th>
                                                                             </tr>
                                                                             
                                                                             <tr>
+                                                                                <td></td>
                                                                                     <td>Juan Pérez</td>
                                                                                     <td><i class="fas fa-check" style="color: green"></i> </td>
-                                                                                    <td> <i class="fa fa-times" style="color: red"></i>
+                                                                                    <td> <button type="button" class="btn btn-danger" ><i class="fa fa-times" style="color: white"></i></button>  
                                                                                     </td>
                                                                                 </tr>
                                     
                                                                                 <tr>
+                                                                                    <td></td>
                                                                                     <td>Juan Pérez</td>
                                                                                     <td> <i class="fa fa-times" style="color: red"></i>
-                                                                                    <td> <i class="fa fa-times" style="color: red"></i>
+                                                                                        <td> <button type="button" class="btn btn-success" ><i class="fas fa-check" style="color: white"></i></button>  
                                     
                                                                                 </tr>
                                     
                                                                                 <tr>
+                                                                                    <td></td>
                                                                                     <td>Juan Pérez</td>
                                                                                     <td> <i class="fa fa-times" style="color: red"></i>
-                                                                                    <td><i class="fas fa-check" style="color: green"></i> </td>
-                                                                                    </tr>
+                                                                                        <td> <button type="button" class="btn btn-danger" ><i class="fa fa-times" style="color: white"></i></button>  
+                                                                                        </tr>
                                                                 
                                                                                 <tr>
+                                                                                    <th></th>
                                                                                     <td>Juan Pérez</td>
                                                                                     <td><i class="fas fa-check" style="color: green"></i> </td>
-                                                                                    <td><i class="fas fa-check" style="color: green"></i> </td>
-                                                                                </tr>
+                                                                                    <td> <button type="button" class="btn btn-success" ><i class="fas fa-check" style="color: white"></i></button>  
+                                                                                    </tr>
                                 
                                                                     </thead>
 
